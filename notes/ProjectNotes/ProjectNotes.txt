@@ -1,0 +1,13 @@
+Naming in this project, sometimes will vary with _
+
+Global
+
+variablename
+
+oObjectName
+rRoomName
+
+spr_SpriteName
+snd_SoundName
+scr_ScriptName
+fnt_FontName
