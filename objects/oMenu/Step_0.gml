@@ -4,7 +4,7 @@ if instance_exists(oCamera)
 {
 	//Make Menu follow the Camera Object
 	guiX = (oCamera.x - offsetX)
-	guiY = (oCamera.y - offsetY)
+	guiY = (oCamera.y + offsetY)
 }
 
 //Destroy Menu
@@ -19,7 +19,7 @@ switch (menuhighlighted) {
 	//Resume
 	case 1: instance_destroy(oMenu); break;
 	//Settings
-	case 2: break;
+	case 2: show_message("not implemented yet"); break;
 	//Quit Game
 	case 3: game_end(); break;
 	default:

@@ -23,8 +23,8 @@ if instance_exists(oCamera)
 	var camera_bottom_rightY = (oCamera.cameraheight*oCamera.camerascale)-guiY_offset
 	
 	scr_DrawSetAll(1,c_white,fa_bottom,fa_right,fnt_Menu);
-	draw_text(camera_bottom_rightX,camera_bottom_rightY,string(current_experience)+string(" / ")+string(max_experience)
-	
-	)
+	draw_text(camera_bottom_rightX,camera_bottom_rightY,string(current_experience)+string(" / ")+string(max_experience))
+	draw_text(camera_bottom_rightX,camera_bottom_rightY-64,string(current_hp)+string(" / ")+string(max_hp));
+
 }
 //+string("\n: ")+string()

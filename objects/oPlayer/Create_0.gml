@@ -5,8 +5,9 @@ moving_check = false;
 global.look_direction = 0;
 move_direction = 0;
 
-max_hp = 10;
+max_hp = 1000;
 current_hp = max_hp;
+player_died = false;
 
 max_experience = 25;
 current_experience = 0;

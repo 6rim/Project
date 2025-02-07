@@ -6,6 +6,13 @@ if pressed_BACKSPACE
 	game_restart();	//temporarily here for debugging
 }
 
+if current_hp <= 0 && player_died = false
+{
+	show_message("you 'died'");
+	playerstate = states.death;
+	player_died = true;
+	game_end();
+}
 
 if pressed_LMB
 {
