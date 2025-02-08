@@ -6,12 +6,21 @@ if pressed_BACKSPACE
 	game_restart();	//temporarily here for debugging
 }
 
-if current_hp <= 0 && player_died = false
+if current_hp <= 0// && player_died = false //Player death + end game
 {
-	show_message("you 'died'");
+	show_message(end_message[irandom(2)]);
 	playerstate = states.death;
 	player_died = true;
 	game_end();
+}
+
+if current_experience >= max_experience
+{
+	current_experience = 0; //reset xp bar
+	current_level ++; //level up
+	max_experience += ceil(max_experience*0.25);
+	current_hp = max_hp
+	max_hp += ceil(max_hp*0.25);
 }
 
 if pressed_LMB

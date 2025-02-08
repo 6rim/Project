@@ -22,9 +22,15 @@ if instance_exists(oCamera)
 	var camera_bottom_rightX = (oCamera.camerawidth*oCamera.camerascale)-guiX_offset
 	var camera_bottom_rightY = (oCamera.cameraheight*oCamera.camerascale)-guiY_offset
 	
+	var experience_offsetY = 0;
+	var level_offsetY = 16;
+	var hp_offsetY = 32;
+	
 	scr_DrawSetAll(1,c_white,fa_bottom,fa_right,fnt_Menu);
-	draw_text(camera_bottom_rightX,camera_bottom_rightY,string(current_experience)+string(" / ")+string(max_experience))
-	draw_text(camera_bottom_rightX,camera_bottom_rightY-64,string(current_hp)+string(" / ")+string(max_hp));
+	
+	draw_text(camera_bottom_rightX,camera_bottom_rightY-hp_offsetY,string(current_hp)+string(" / ")+string(max_hp)+string(" HP"));
+	draw_text(camera_bottom_rightX,camera_bottom_rightY-level_offsetY,string("Level ")+string(current_level))
+	draw_text(camera_bottom_rightX,camera_bottom_rightY-experience_offsetY,string(current_experience)+string(" / ")+string(max_experience)+string(" EXP"))
 
 }
 //+string("\n: ")+string()

@@ -5,11 +5,11 @@ moving_check = false;
 global.look_direction = 0;
 move_direction = 0;
 
-max_hp = 1000;
+max_hp = 50;
 current_hp = max_hp;
 player_died = false;
 
-max_experience = 25;
+max_experience = 4;
 current_experience = 0;
 current_level = 1;
 
@@ -55,6 +55,13 @@ sprite_index = sprite[sprite_current];
 //DECLARE PLAYER STATES
 enum states { free, run, stunned, death }
 playerstate = states.free;
+
+end_message[0] = "you died";
+end_message[1] = "=3";
+end_message[2] = "better luck next time :("
+
+
+
 
 //Used in Initialization
 movementenabled = false;

@@ -10,6 +10,7 @@ path_viewY = point_distance(x,y,target.x,target.y);
 if ( path_distance < path_stopdistance ) { movement_speed = 0; current_state = enemy_state.attack; } //Change state to attack
 
 
+
 #region Attack
 if current_state = enemy_state.attack && attack_counter >= 1
 { attack_counter = 0; alarm[2] = attack_cooldown; } //Start timer and attack
