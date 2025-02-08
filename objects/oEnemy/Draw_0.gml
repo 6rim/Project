@@ -3,6 +3,7 @@
 //offsets
 var health_offsetX = 0;
 var health_offsetY = sprite_get_height(sprite_index)+10;
+var state_offsetY = sprite_get_height(sprite_index);
 var shadow_offset = 1;
 
 if path_debug = true
@@ -14,7 +15,8 @@ if path_debug = true
 	//Draw line with color if you're in range
 	if path_distance < path_viewdistance {draw_set_alpha(0.2); draw_set_color(c_red);}else{draw_set_alpha(0.08); draw_set_color(c_white);}
 	draw_line(x,y,target.x,target.y);
-	draw_text(x,y-health_offsetY-10,"State:"+string(current_state)); //Draw the state
+	draw_set_alpha(0.8);
+	draw_text_ext_transformed(x,y-state_offsetY,"State: "+string(current_state_name),1,96,0.75,0.75,0); //Draw the state
 }
 
 

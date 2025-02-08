@@ -1,3 +1,5 @@
+noclip = true;
+debug = true;
 playername = "Player Name";
 dt = 0;
 

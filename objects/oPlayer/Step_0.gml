@@ -1,10 +1,28 @@
 //Call Player Input
 scr_PlayerInput();
 
+#region	Debug toggle
 if pressed_BACKSPACE
 {
-	game_restart();	//temporarily here for debugging
+switch (noclip) {
+case true: noclip = false;
+break; //Toggle noclip
+case false: noclip = true;
 }
+}else
+if pressing_SHIFT && pressed_BACKSPACE { game_restart(); }//temporarily here for debugging
+
+if pressing_SHIFT && pressed_TAB
+{
+switch (debug) {
+case true: debug = false;
+break; //Toggle debug
+case false: debug = true;
+}
+}
+
+
+#endregion
 
 if current_hp <= 0// && player_died = false //Player death + end game
 {
