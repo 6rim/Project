@@ -1,3 +1,5 @@
+debug = false;
+
 target_default = oPlayer;
 target = target_default;
 targetX = target.x;
@@ -12,13 +14,15 @@ push_radius = push; //init for step
 path = path_add();
 path_debug = true;
 path_distance = distance_to_object(target);
-path_viewdistance = 90; //distance the enemy can "see"
-path_stopdistance = 40; //distance from target to disengage and begin attacking
+path_viewdistance = 144; //distance the enemy can "see"
+path_stopdistance = 50; //distance from target to disengage and begin attacking
 path_direction = point_direction(x,y,target.x,target.y);
 path_viewX = 0; 
 path_viewY = 0; //initialize for drawing debug
+
 player_in_range  = ( path_distance < path_viewdistance );
 target_not_met = ( path_distance >= path_stopdistance );
+at_stop_distance = ( path_distance <= path_stopdistance );
 
 wall_in_LOS = collision_line(x,y,target.x,target.y,oWall,false,false) //prevent shooting walls
 self_in_LOS = collision_line(x,y,target.x,target.y,oEnemy,false,true) //prevent clumping

@@ -1,4 +1,4 @@
-menudebug = true;
+debug = false;
 
 guiX = -1; //Position to display GUI
 guiY = -1;

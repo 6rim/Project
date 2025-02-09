@@ -9,7 +9,7 @@ current_state_name = state_name[current_state]; //update for displaying
 
 //if ( path_distance < path_stopdistance ) { movement_speed = 0; current_state = enemy_state.idle; } //Disengage
 
-if ( path_distance < path_stopdistance ) { movement_speed = 0; current_state = enemy_state.attack; } //Change state to attack
+//if ( path_distance < path_stopdistance ) { movement_speed = 0; current_state = enemy_state.attack; } //Change state to attack
 
 
 push_radius = collision_circle(x,y,push,oEnemy,1,0); //for collision with self

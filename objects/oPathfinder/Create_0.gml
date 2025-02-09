@@ -1,3 +1,5 @@
+debug = false;
+
 depth = -3000;
 
 //Initialize the grid

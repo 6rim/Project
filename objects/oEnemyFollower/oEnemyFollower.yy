@@ -33,5 +33,5 @@
     "path": "sprites/spr_EnemyFollower/spr_EnemyFollower.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

@@ -1,6 +1,6 @@
 /// @desc	DEBUG
 
-if menudebug = true
+if debug = true
 {
 
 //draw_sprite_stretched(spr_MenuBackgroundDefault,0,16,16,24*6,24*3)

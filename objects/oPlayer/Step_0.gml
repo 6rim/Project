@@ -1,32 +1,13 @@
 //Call Player Input
 scr_PlayerInput();
+scr_BattleScript()
 
-#region	Debug toggle
-if pressed_BACKSPACE
-{
-switch (noclip) {
-case true: noclip = false;
-break; //Toggle noclip
-case false: noclip = true;
-}
-}else
-if pressing_SHIFT && pressed_BACKSPACE { game_restart(); }//temporarily here for debugging
+if pressing_SHIFT && pressed_Enter { save_location(); }
 
-if pressing_SHIFT && pressed_TAB
-{
-switch (debug) {
-case true: debug = false;
-break; //Toggle debug
-case false: debug = true;
-}
-}
-
-
-#endregion
 
 if current_hp <= 0// && player_died = false //Player death + end game
 {
-	show_message(end_message[irandom(2)]);
+	show_message(end_message[choose(0,1,2)]);
 	playerstate = states.death;
 	player_died = true;
 	game_end();
@@ -72,6 +53,8 @@ camera_tipY = point_distance(x,y,mouse_x,mouse_y);
 
 #region Movement and Collisions
 
+if global.gravity_toggle = false //TOPDOWN MOVEMENT SYSTEM
+{
 var xkey = pressing_D - pressing_A;
 var ykey = pressing_S - pressing_W;
 move_direction = point_direction(0,0,xkey,ykey);
@@ -80,25 +63,45 @@ var spd = 0;
 var runspd = 0;
 var inputlevel = point_distance(0,0,xkey,ykey);
 inputlevel = clamp(inputlevel,0,1);
+spd = move_speed * inputlevel;
+runspd = run_speed * inputlevel;
+
+//DYNAMIC MOVESPEED (topdown)
+if !pressing_SHIFT { spdX = lengthdir_x( spd, move_direction); spdY = lengthdir_y( spd, move_direction); } 
+else 
+if pressing_SHIFT { spdX = lengthdir_x( runspd, move_direction); spdY = lengthdir_y( runspd, move_direction); }
+} else
+
+
+if global.gravity_toggle = true //PLATFORMER MOVEMENT SYSTEM
+{
+var xkey = pressing_D - pressing_A;
+var jumpkey = pressed_SPACE;
+move_direction = point_direction(0,0,xkey,jumpkey);
+
+var spd = 0;
+var runspd = 0;
+var inputlevel = point_distance(0,0,xkey,jumpkey);
+inputlevel = clamp(inputlevel,0,1);
 
 spd = move_speed * inputlevel;
 runspd = run_speed * inputlevel;
 
-//DYNAMIC MOVESPEED
+//DYNAMIC MOVESPEED (platformer)
 if !pressing_SHIFT { spdX = lengthdir_x( spd, move_direction); spdY = lengthdir_y( spd, move_direction); } 
 else 
 if pressing_SHIFT { spdX = lengthdir_x( runspd, move_direction); spdY = lengthdir_y( runspd, move_direction); }
+}
 
 
 //COLLISIONS
 if place_meeting(x+spdX,y,oWall) { spdX = 0; }
 if place_meeting(x,y+spdY,oWall) { spdY = 0; }
-if place_meeting(x+spdX,y,oWallHalf) { spdX = 0; }
-if place_meeting(x,y+spdY,oWallHalf) { spdY = 0; }
+if place_meeting(x+spdX,y,oBattleWall) { spdX = 0; }
+if place_meeting(x,y+spdY,oBattleWall) { spdY = 0; }
 
 
 //STATES
-
 if (playerstate = states.free && movementenabled = true)
 {
 	if pressing_SHIFT { playerstate = states.run; } //Change to "Run"
@@ -116,6 +119,17 @@ if playerstate == states.stunned
 	//movementenabled = false; //Disable movement from player temporarily
 }
 #endregion
+
+//if global.gravity_toggle = true { spdY += gravity_amt;} bugs out animations because vspd is their trigger
+
+
+if instance_exists(oWand)
+{
+if global.wand_direction >= 25 && global.wand_direction <= 155
+{
+	//sprite_current = "up";	
+}
+}
 
 #region Sprite Controls
 if notwalking && (spdX = 0 && spdY = 0)
