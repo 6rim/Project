@@ -2,25 +2,37 @@ function scr_BattleScript(){
 	
 	function save_location() 
 	{
-	var savedX = x; //will need these variables in each saved object
-	var savedY = y;
-	var savedRoom = room;
 	
-	var destRoomX = 80;
-	var destRoomY = 264;
-	var destRoom = rBattleRoom; //destination room
+	savedX = x; 
+	savedY = y; 
+	savedRoom = room;
 	
-	x = destRoomX; y = destRoomY; //go to battle room start position
-	room_goto(destRoom); //go to battle room
+	var targetX = argument0; //spawn in battle
+	var targetY = argument1;
+	var destination = argument2; //destination room
+	
+	room_goto(destination); //go to battle room
+	x = targetX;
+	y = targetY; //go to battle room start position
 	global.gravity_toggle = true; //enable gravity
 	if instance_exists(oCamera) { instance_destroy(oCamera); } //refresh camera
+	
 	}
 	
 	
 	
 	function load_location()
 	{
-		
+	var savedX = argument0;//80;
+	var savedY = argument1;//264;
+	var savedRoom = argument2; //destination room
+	
+	room_goto(savedRoom); //go to battle room
+	x = savedX;
+	y = savedY; //go to battle room start position
+	if savedRoom = rStartGame global.gravity_toggle = false; //enable gravity
+	if instance_exists(oCamera) { instance_destroy(oCamera); } //refresh camera
+	
 	}
 		
 		// add transition, refresh camera

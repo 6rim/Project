@@ -1,4 +1,4 @@
-///@description MAIN CONTROLLER
+///@description Debug Controller
 
 //TODO:
 //Change setting from menu instead of ESC toggle button

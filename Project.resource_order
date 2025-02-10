@@ -36,6 +36,7 @@
     {"name":"spr_Projectile_FireballBasic","order":25,"path":"sprites/spr_Projectile_FireballBasic/spr_Projectile_FireballBasic.yy",},
     {"name":"spr_WandDefault","order":29,"path":"sprites/spr_WandDefault/spr_WandDefault.yy",},
     {"name":"spr_PlayerIcon_FaceDefaultDamaged","order":17,"path":"sprites/spr_PlayerIcon_FaceDefaultDamaged/spr_PlayerIcon_FaceDefaultDamaged.yy",},
+    {"name":"-","order":24,"path":"notes/-/-.yy",},
     {"name":"spr_PlayerWizardRight","order":22,"path":"sprites/spr_PlayerWizardRight/spr_PlayerWizardRight.yy",},
     {"name":"oBattleHandler","order":22,"path":"objects/oBattleHandler/oBattleHandler.yy",},
     {"name":"scr_BattleScript","order":12,"path":"scripts/scr_BattleScript/scr_BattleScript.yy",},

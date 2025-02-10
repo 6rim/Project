@@ -15,6 +15,7 @@ string("Move Direction: ")+string(move_direction)
 +string("\nMvmnt Enabled: ")+string(movementenabled)
 +string("\nPlayer State: ")+string(playerstate)
 +string("\nLook Direction: ")+string(global.look_direction)
++string("\nSaved Room: ")+string(savedRoom)
 )
 }
 
@@ -30,12 +31,15 @@ if instance_exists(oCamera)
 	var level_offsetY = 16;
 	var hp_offsetY = 32;
 	
+	var location_offsetY = 64;
+	
 	scr_DrawSetAll(1,c_white,fa_bottom,fa_right,fnt_Menu);
 	
 	if debug = true
 	{
 	draw_text(camera_bottom_rightX,camera_bottom_rightY-debug_offsetY,string("Debug: ")+string(debug)+string(" / ")+string("Noclip ")+string(noclip));
 	}
+	draw_text(camera_bottom_rightX,camera_bottom_rightY-location_offsetY,string("SAVED ROOM ")+string(savedRoom));
 	draw_text(camera_bottom_rightX,camera_bottom_rightY-hp_offsetY,string(current_hp)+string(" / ")+string(max_hp)+string(" HP"));
 	draw_text(camera_bottom_rightX,camera_bottom_rightY-level_offsetY,string("Level ")+string(current_level))
 	draw_text(camera_bottom_rightX,camera_bottom_rightY-experience_offsetY,string(current_experience)+string(" / ")+string(max_experience)+string(" EXP"))

@@ -56,6 +56,7 @@
     {"id":{"name":"spr_Projectile_FireballBasic","path":"sprites/spr_Projectile_FireballBasic/spr_Projectile_FireballBasic.yy",},},
     {"id":{"name":"spr_WandDefault","path":"sprites/spr_WandDefault/spr_WandDefault.yy",},},
     {"id":{"name":"spr_PlayerIcon_FaceDefaultDamaged","path":"sprites/spr_PlayerIcon_FaceDefaultDamaged/spr_PlayerIcon_FaceDefaultDamaged.yy",},},
+    {"id":{"name":"-","path":"notes/-/-.yy",},},
     {"id":{"name":"spr_PlayerWizardRight","path":"sprites/spr_PlayerWizardRight/spr_PlayerWizardRight.yy",},},
     {"id":{"name":"oBattleHandler","path":"objects/oBattleHandler/oBattleHandler.yy",},},
     {"id":{"name":"scr_BattleScript","path":"scripts/scr_BattleScript/scr_BattleScript.yy",},},

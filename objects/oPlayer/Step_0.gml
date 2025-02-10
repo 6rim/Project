@@ -1,10 +1,14 @@
 //Call Player Input
 scr_PlayerInput();
-scr_BattleScript()
+scr_BattleScript();
 
-if !instance_exists(oCamera) {instance_create_depth(x,y,depth,oCamera);}
+if !instance_exists(oCamera) {instance_create_depth(x,y,depth,oCamera);} //recreate camera if it is destroyed
 
-if pressing_SHIFT && pressed_Enter { save_location(); }
+/*
+if room = !rBattleRoom &&pressing_SHIFT && pressed_Enter { save_location(savedX,savedY,rBattleRoom); } //save location and GO
+if room = rBattleRoom && pressing_SHIFT && pressed_Enter { save_location(savedX,savedY,savedRoom); } //reload
+//load_location(savedX,savedY,savedRoom);
+*/
 
 
 if current_hp <= 0// && player_died = false //Player death + end game
