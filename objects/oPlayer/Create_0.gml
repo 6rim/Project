@@ -1,10 +1,12 @@
-noclip = true;
+noclip = false;
 debug = false;
 playername = "Player Name";
 
 
-global.gravity_toggle = false;
-gravity_amt = 3;
+global.gravity_toggle = true;
+gravity_amt = 0.05;
+jump_amt = 1;
+can_jump = false;
 
 moving_check = false;
 global.look_direction = 0;

@@ -2,6 +2,8 @@
 scr_PlayerInput();
 scr_BattleScript()
 
+if !instance_exists(oCamera) {instance_create_depth(x,y,depth,oCamera);}
+
 if pressing_SHIFT && pressed_Enter { save_location(); }
 
 
@@ -77,20 +79,22 @@ if global.gravity_toggle = true //PLATFORMER MOVEMENT SYSTEM
 {
 var xkey = pressing_D - pressing_A;
 var jumpkey = pressed_SPACE;
-move_direction = point_direction(0,0,xkey,jumpkey);
+//move_direction = point_direction(0,0,xkey,jumpkey);
+
 
 var spd = 0;
 var runspd = 0;
-var inputlevel = point_distance(0,0,xkey,jumpkey);
-inputlevel = clamp(inputlevel,0,1);
+//var inputlevel = point_distance(0,0,xkey,jumpkey);
+//inputlevel = clamp(inputlevel,0,1);
 
-spd = move_speed * inputlevel;
-runspd = run_speed * inputlevel;
+if movementenabled = true
+{
+spdX = move_speed * xkey;
+runspd = run_speed * xkey;
+spdY += gravity_amt;
+}
 
-//DYNAMIC MOVESPEED (platformer)
-if !pressing_SHIFT { spdX = lengthdir_x( spd, move_direction); spdY = lengthdir_y( spd, move_direction); } 
-else 
-if pressing_SHIFT { spdX = lengthdir_x( runspd, move_direction); spdY = lengthdir_y( runspd, move_direction); }
+if jumpkey && can_jump = true {spdY = -jump_amt; can_jump = false;}//make player jump
 }
 
 
@@ -98,7 +102,8 @@ if pressing_SHIFT { spdX = lengthdir_x( runspd, move_direction); spdY = lengthdi
 if place_meeting(x+spdX,y,oWall) { spdX = 0; }
 if place_meeting(x,y+spdY,oWall) { spdY = 0; }
 if place_meeting(x+spdX,y,oBattleWall) { spdX = 0; }
-if place_meeting(x,y+spdY,oBattleWall) { spdY = 0; }
+if place_meeting(x,y+spdY,oBattleWall) { spdY = 0; can_jump = true;}
+
 
 
 //STATES
@@ -120,7 +125,7 @@ if playerstate == states.stunned
 }
 #endregion
 
-//if global.gravity_toggle = true { spdY += gravity_amt;} bugs out animations because vspd is their trigger
+
 
 
 if instance_exists(oWand)

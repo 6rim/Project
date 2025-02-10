@@ -59,6 +59,7 @@
     {"name":"fnt_Menu","order":1,"path":"fonts/fnt_Menu/fnt_Menu.yy",},
     {"name":"oButtonExample","order":6,"path":"objects/oButtonExample/oButtonExample.yy",},
     {"name":"spr_Crate","order":2,"path":"sprites/spr_Crate/spr_Crate.yy",},
+    {"name":"spr_BattleWall","order":37,"path":"sprites/spr_BattleWall/spr_BattleWall.yy",},
     {"name":"fnt_Button","order":3,"path":"fonts/fnt_Button/fnt_Button.yy",},
     {"name":"spr_CrateDeath","order":5,"path":"sprites/spr_CrateDeath/spr_CrateDeath.yy",},
     {"name":"scr_PlayerStatusClear","order":1,"path":"scripts/scr_PlayerStatusClear/scr_PlayerStatusClear.yy",},

@@ -1,5 +1,5 @@
 //Optional
-if cameradebug = true
+if debug = true
 {
 	draw_self();
 }

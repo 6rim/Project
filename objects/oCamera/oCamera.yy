@@ -34,5 +34,5 @@
     "path": "sprites/spr_Camera/spr_Camera.yy",
   },
   "spriteMaskId": null,
-  "visible": false,
+  "visible": true,
 }

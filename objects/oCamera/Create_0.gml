@@ -13,7 +13,7 @@ camerawidth = 320;
 cameraheight = 180;
 */
 
-cameradebug = true;
+debug = false;
 
 targetY = 0;
 targetX = 0;

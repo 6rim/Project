@@ -1,6 +1,7 @@
 depth = 1;
 
-buttondebug = true;
+debug = false;
+mouse_in_range = 0; //init for step event on child
 
 buttonsprite = spr_ButtonTemplate;
 spritesize = sprite_get_width(spr_ButtonTemplate);

@@ -14,7 +14,9 @@ function scr_PlayerInput(){
 	pressing_LMB = mouse_check_button(mb_left);
 	pressing_RMB = mouse_check_button(mb_right);
 	
-	pressed_SPACE = keyboard_check(vk_space);
+	pressed_SPACE = keyboard_check_pressed(vk_space);
+	pressing_SPACE = keyboard_check(vk_space);
+	
 	pressed_SCRLUP = mouse_wheel_up();
 	pressed_SCRLDOWN = mouse_wheel_down();
 	

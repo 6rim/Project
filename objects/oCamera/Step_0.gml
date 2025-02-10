@@ -51,3 +51,4 @@ camera_centerY = cameraY+cameraheight/2;
 
 //Apply Changes
 camera_set_view_pos(global.Camera,cameraX,cameraY);
+depth_get();

@@ -80,6 +80,7 @@
     {"id":{"name":"scr_PlayerInput","path":"scripts/scr_PlayerInput/scr_PlayerInput.yy",},},
     {"id":{"name":"oButtonExample","path":"objects/oButtonExample/oButtonExample.yy",},},
     {"id":{"name":"spr_Crate","path":"sprites/spr_Crate/spr_Crate.yy",},},
+    {"id":{"name":"spr_BattleWall","path":"sprites/spr_BattleWall/spr_BattleWall.yy",},},
     {"id":{"name":"fnt_Button","path":"fonts/fnt_Button/fnt_Button.yy",},},
     {"id":{"name":"fnt_ComicSans14","path":"fonts/fnt_ComicSans14/fnt_ComicSans14.yy",},},
     {"id":{"name":"spr_CrateDeath","path":"sprites/spr_CrateDeath/spr_CrateDeath.yy",},},
