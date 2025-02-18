@@ -1,6 +1,7 @@
 //Call Player Input
 scr_PlayerInput();
 scr_BattleScript();
+Macro();
 
 if !instance_exists(oCamera) {instance_create_depth(x,y,depth,oCamera);} //recreate camera if it is destroyed
 

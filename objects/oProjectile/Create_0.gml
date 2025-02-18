@@ -2,6 +2,7 @@
 
 image_alpha = 0;
 
+
 distance_traveled = 0;
 max_distance = 200;
 fade_distance = max_distance;
@@ -9,6 +10,10 @@ scaleX = 1;
 scaleY = 1;
 
 projectile_damage = 2;
+
+
+alpha_destroy = false; //toggle after creating to destroy it later
+alarm[0] = room_speed*1;
 
 angle = 0;
 projectile_alpha = 0;

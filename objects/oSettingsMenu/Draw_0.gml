@@ -9,10 +9,10 @@ draw_sprite_stretched(spr_MenuBackgroundDefault,0,guiX,guiY,menuwidth*menutile,m
 if menutitle != -1
 {
 	draw_set_color(c_black);
-	draw_set_font(fnt_ComicSans14);
+	draw_set_font(fnt_Menu);
 	//Draw Title
 	//draw_text(guiX+menumarginX,guiY+menumarginY/2,menutitle);
-	draw_text_ext_transformed(guiX+menumarginX+32,guiY+menumarginY/2,menutitle,10,300,0.5,0.5,270);
+	draw_text_ext_transformed(guiX+menumarginX/2,guiY+menumarginY/2,menutitle,10,300,1,1,0);
 	//Draw Options
 	draw_set_font(fnt_Menu);
 	for (var i = 1; i < optionsamount; ++i) {

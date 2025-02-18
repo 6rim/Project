@@ -27,6 +27,7 @@ if current_state = projectile_state.death
 	projectile_alpha -= projectile_fadeout; //Alpha Fade Out
 }
 
+if alpha_destroy = true && image_alpha <= 0 { instance_destroy(); }
 
 image_angle = angle;
 sprite_index = projectile_sprite;

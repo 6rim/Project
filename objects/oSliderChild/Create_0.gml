@@ -1,10 +1,9 @@
 event_inherited();
+debug = true;
 
-depth_get(-500);
+depth = -600;
 
 slider_length = 9;
-offset = 34;
-
 
 posX = xstart;
 posY = ystart;
@@ -14,3 +13,5 @@ posY = ystart;
 
 slider_zero = xstart;
 slider_max = xstart+(slider_length*slider_size);
+
+slider_current = x;

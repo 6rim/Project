@@ -1,6 +1,5 @@
+///@description Draw MAIN Debug
 
-
-//Draw debug
 if debug = true 
 {
 scr_DrawSetAll(1,c_white,fa_top,fa_left,fnt_Menu);
@@ -12,12 +11,22 @@ string("Move Direction: ")+string(move_direction)
 +string("\nMoving Check: ")+string(moving_check)
 +string("\nspdX: ")+string(spdX)
 +string("\nspdY: ")+string(spdY)
-
 +string("\nShift: ")+string(pressing_SHIFT)
 +string("\nMvmnt Enabled: ")+string(movementenabled)
 +string("\nPlayer State: ")+string(playerstate)
-+string("\nLook Direction: ")+string(global.look_direction)
-+string("\nSaved Room: ")+string(savedRoom)
++string("\nLook Dir: ")+string(global.look_direction)
++string("\nWand Dir: ")+string(global.wand_direction)
++string("\nCamMid X: ")+string(camcenterx)
++string("\nCamMid Y: ")+string(camcentery)
++string("\nCam W: ")+string(camw)
++string("\nCam H: ")+string(camh)
++string("\nMouse X: ")+string(mouse_x)
++string("\nMouse Y: ")+string(mouse_y)
++string("\nSave Rm: ")+string(savedRoom)
+
+
+
+//+string("\n: ")+string()
 )
 }
 

@@ -6,6 +6,7 @@ function scr_PlayerInput(){
 	pressed_RMB = mouse_check_button_pressed(mb_right);
 	pressed_ESC = keyboard_check_pressed(vk_escape);
 	pressed_TAB = keyboard_check_pressed(vk_tab);
+	released_TAB = keyboard_check_released(vk_tab);
 	pressed_W = keyboard_check_pressed(ord("W"));
 	pressed_A = keyboard_check_pressed(ord("A"));
 	pressed_S = keyboard_check_pressed(ord("S"));
