@@ -44,6 +44,8 @@ with instance_create_depth(projectile_offsetX,projectile_offsetY,depth-1,oProjec
 if instance_exists(oWand)
 {
 angle = global.wand_direction;
+max_distance = oWand.current_projectile_max_distance;
+projectile_damage = oWand.current_projectile_damage;
 projectile_sprite = oWand.current_projectile_sprite;
 projectile_speed = oWand.current_projectile_speed;
 targetX = mouse_x;

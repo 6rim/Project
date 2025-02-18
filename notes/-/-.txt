@@ -2,3 +2,6 @@
 */
 
 \n
+
+
+global.gravity_toggle = true; //enable gravity

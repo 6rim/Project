@@ -5,6 +5,9 @@ if instance_exists(oCamera)
 	//Make Menu follow the Camera Object
 	guiX = (oCamera.x - offsetX)
 	guiY = (oCamera.y + offsetY)
+	
+	guiX = clamp(guiX-((menuwidth*menutile)/2),0,room_width-(menuwidth*menutile))
+	guiY = clamp(guiY,0,room_height-(menuheight*menutile))
 }
 
 //Destroy Menu

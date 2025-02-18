@@ -1,3 +1,5 @@
+
+
 //Draw debug
 if debug = true 
 {
@@ -38,8 +40,9 @@ if instance_exists(oCamera)
 	if debug = true
 	{
 	draw_text(camera_bottom_rightX,camera_bottom_rightY-debug_offsetY,string("Debug: ")+string(debug)+string(" / ")+string("Noclip ")+string(noclip));
+	draw_text(camera_bottom_rightX,camera_bottom_rightY-location_offsetY,string("near")+string(instance_nearest(x,y,oEnemy)));
 	}
-	draw_text(camera_bottom_rightX,camera_bottom_rightY-location_offsetY,string("SAVED ROOM ")+string(savedRoom));
+
 	draw_text(camera_bottom_rightX,camera_bottom_rightY-hp_offsetY,string(current_hp)+string(" / ")+string(max_hp)+string(" HP"));
 	draw_text(camera_bottom_rightX,camera_bottom_rightY-level_offsetY,string("Level ")+string(current_level))
 	draw_text(camera_bottom_rightX,camera_bottom_rightY-experience_offsetY,string(current_experience)+string(" / ")+string(max_experience)+string(" EXP"))

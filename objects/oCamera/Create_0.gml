@@ -5,7 +5,8 @@ cameraY_offset = 64;
 camera_centerX = 0; //these are updated in step
 camera_centerY = 0;
 
-
+cameraViewX = 0;
+cameraViewY = 0;
 
 
 /* Default

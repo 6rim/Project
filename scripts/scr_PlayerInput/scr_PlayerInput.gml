@@ -12,6 +12,7 @@ function scr_PlayerInput(){
 	pressed_D = keyboard_check_pressed(ord("D"));
 	
 	pressing_LMB = mouse_check_button(mb_left);
+	released_LMB = mouse_check_button_released(mb_left);
 	pressing_RMB = mouse_check_button(mb_right);
 	
 	pressed_SPACE = keyboard_check_pressed(vk_space);

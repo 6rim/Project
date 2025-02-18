@@ -4,7 +4,7 @@ image_alpha = 0;
 
 distance_traveled = 0;
 max_distance = 200;
-fade_distance = 180;
+fade_distance = max_distance;
 scaleX = 1;
 scaleY = 1;
 
@@ -13,7 +13,7 @@ projectile_damage = 2;
 angle = 0;
 projectile_alpha = 0;
 projectile_fadein = 0.25;
-projectile_fadeout = 0.15;
+projectile_fadeout = 0.45;
 projectile_sprite = spr_Projectile;
 projectile_current_frame = 0;
 projectile_frame_speed = 0.75;

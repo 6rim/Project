@@ -1,9 +1,8 @@
-//scr_BattleScript();
-
 noclip = false;
 debug = false;
 playername = "Player Name";
 
+begin_battle = false;
 battleStartX = 80; //position for battle
 battleStartY = 280;
 savedX = battleStartX;

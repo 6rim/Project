@@ -31,6 +31,8 @@ if (instance_exists(oCursor) && camerahighlighted == true)
 cameraX = camera_get_view_x(global.Camera);
 cameraY = camera_get_view_y(global.Camera);
 
+cameraViewX = cameraX - camerawidth/2;
+cameraViewY = cameraY - cameraheight/2;
 
 targetX = (follow.x) + sprite_get_width(spr_PlayerIdleDefault)/2 - camerawidth / 2;
 targetY = (follow.y) + sprite_get_height(spr_PlayerIdleDefault)/2- cameraheight / 2;

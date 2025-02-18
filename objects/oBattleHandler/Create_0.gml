@@ -1,9 +1,8 @@
 scr_BattleScript();
 
+debug = false;
 battle_started = false;
-if instance_exists(oCrate) && room = rBattleRoom { battle_started = true; }
 
-current_initiative = 0;
 
 savedX = x; 
 savedY = y; 
@@ -22,20 +21,16 @@ stage[0,4] = rBattleRoom //stage room
 
 current_stage = 0; //set the stage
 
-
-
-/*
-function start_battle(targetX,targetY)
-{
-	if !instance_exists(oEnemyDummy)
-	{
-		instance_create_depth(targetX,targetY,depth-1,oEnemyDummy);
-	}
-}
-*/
-
 stage_id = stage[current_stage][0]; //pointless but funny
 stage_name = stage[current_stage][1];
 stage_sprite = stage[current_stage][2];
 stage_subimage = stage[current_stage][3];
 stage_room = stage[current_stage][4];
+
+
+current_turn = 0; //amount of turns played this battle
+current_phase = 0; //0 start, 1 player turn, 2 enemy turn, 3 end battle
+
+dummy[0] = -1;
+dummy[1] = -1;
+dummy[2] = -1;

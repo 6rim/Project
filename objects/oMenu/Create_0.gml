@@ -1,9 +1,11 @@
 debug = false;
 
+depth = -500;
+
 guiX = -1; //Position to display GUI
 guiY = -1;
-offsetX = 135;
-offsetY = 64;
+offsetX = 0;
+offsetY = -90;
 
 
 menuhighlighted = 1;

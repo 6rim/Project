@@ -1,3 +1,5 @@
+scr_BattleScript();
+
 debug = false;
 
 target_default = oPlayer;
@@ -15,7 +17,7 @@ path = path_add();
 path_debug = true;
 path_distance = distance_to_object(target);
 path_viewdistance = 144; //distance the enemy can "see"
-path_stopdistance = 50; //distance from target to disengage and begin attacking
+path_stopdistance = 32; //distance from target to disengage and begin attacking
 path_direction = point_direction(x,y,target.x,target.y);
 path_viewX = 0; 
 path_viewY = 0; //initialize for drawing debug

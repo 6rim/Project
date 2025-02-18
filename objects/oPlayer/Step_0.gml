@@ -4,11 +4,17 @@ scr_BattleScript();
 
 if !instance_exists(oCamera) {instance_create_depth(x,y,depth,oCamera);} //recreate camera if it is destroyed
 
-/*
-if room = !rBattleRoom &&pressing_SHIFT && pressed_Enter { save_location(savedX,savedY,rBattleRoom); } //save location and GO
-if room = rBattleRoom && pressing_SHIFT && pressed_Enter { save_location(savedX,savedY,savedRoom); } //reload
-//load_location(savedX,savedY,savedRoom);
-*/
+
+if begin_battle = true
+{
+	scr_SaveLocation();
+	if instance_exists(oCamera) { instance_destroy(oCamera); } //refresh camera 
+	scr_MoveToRoom(oPlayer,80,264,rBattleRoom);
+	begin_battle = false; //reset
+}
+
+
+
 
 
 if current_hp <= 0// && player_died = false //Player death + end game
@@ -16,9 +22,10 @@ if current_hp <= 0// && player_died = false //Player death + end game
 	show_message(end_message[choose(0,1,2)]);
 	playerstate = states.death;
 	player_died = true;
-	game_end();
+	//game_end();
 }
 
+//crappy level up system, needs updated to shops
 if current_experience >= max_experience
 {
 	current_experience = 0; //reset xp bar
@@ -27,12 +34,6 @@ if current_experience >= max_experience
 	current_hp = max_hp
 	max_hp += ceil(max_hp*0.25);
 }
-
-if pressed_LMB
-{
-//	scr_AnimationPlay(oAnimation,mouse_x,mouse_y,spr_CrateDeath,0.5,true,false,0);
-}
-
 
 //Depth
 depth_get();
@@ -103,11 +104,12 @@ if jumpkey && can_jump = true {spdY = -jump_amt; can_jump = false;}//make player
 
 
 //COLLISIONS
+if noclip = false {
 if place_meeting(x+spdX,y,oWall) { spdX = 0; }
 if place_meeting(x,y+spdY,oWall) { spdY = 0; }
 if place_meeting(x+spdX,y,oBattleWall) { spdX = 0; }
 if place_meeting(x,y+spdY,oBattleWall) { spdY = 0; can_jump = true;}
-
+}
 
 
 //STATES

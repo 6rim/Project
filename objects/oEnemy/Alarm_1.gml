@@ -66,12 +66,21 @@ if movement_enabled = true { path_start(path, movement_speed, path_action_stop, 
 }
 
 //Attack State - Fires projectile in LOS to target
-else if current_state = enemy_state.attack
+else if movement_enabled = true && current_state = enemy_state.attack
 {
 path_end();//stop moving before attacking
-#region Attack Alarm
+#region Attack 
+
+
+//do this on encounter
+if instance_exists(oPlayer) { oPlayer.begin_battle = true; }
+
+
+/* Topdown
 if attack_counter >= 1
 { attack_counter = 0; alarm[2] = attack_cooldown; } //start alarm and attack
+*/
+
 #endregion
 
 if player_in_range && target_not_met { current_state = enemy_state.moving; } //move to find target if obstructed
