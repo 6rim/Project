@@ -5,7 +5,6 @@ Macro();
 
 if !instance_exists(oCamera) {instance_create_depth(x,y,depth,oCamera);} //recreate camera if it is destroyed
 
-
 if begin_battle = true
 {
 	scr_SaveLocation();
@@ -13,10 +12,6 @@ if begin_battle = true
 	scr_MoveToRoom(oPlayer,80,264,rBattleRoom);
 	begin_battle = false; //reset
 }
-
-
-
-
 
 if current_hp <= 0// && player_died = false //Player death + end game
 {

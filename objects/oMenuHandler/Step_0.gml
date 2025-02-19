@@ -11,10 +11,6 @@ if pressed_SEVEN
 	}	
 }
 
-
-
-
-
 //Toggle Fullscreen
 if TOGGLEFULLSCREEN && fullscreentoggle = false
 {
@@ -25,11 +21,7 @@ if TOGGLEFULLSCREEN && fullscreentoggle = true
 	fullscreentoggle = false;
 }
 
-
 //Menu Creation
-
-
-
 if (pressed_TAB && !(instance_exists(oMenu)))
 {
 	scr_MenuCreate(mouse_x,mouse_y,"String",3);
@@ -39,28 +31,29 @@ if (pressed_TAB && !(instance_exists(oMenu)))
 if instance_exists(oPlayer)
 {
 
-if pressed_NINE
+if (pressed_NINE)
 	{
 	oPlayer.x = mouse_x;
 	oPlayer.y = mouse_y;
 	}
 
 if (TOGGLENOCLIP)
-	{
+{
 	switch (oPlayer.noclip) {
 	case true: oPlayer.noclip = false; 
 	break; //Toggle noclip
 	case false: oPlayer.noclip = true;
-							}
 	}
+}
 
-if TOGGLEDEBUG
-	{
+if (TOGGLEDEBUG)
+{
 	switch (debug_toggle) {
 	case false: debug_toggle = true; enable_debug();
 	break; //Toggle debug
-	case true: debug_toggle = false; disable_debug();			  }
+	case true: debug_toggle = false; disable_debug();
 	}
+}
 	
 if GAMERESTART { game_restart();}
 }

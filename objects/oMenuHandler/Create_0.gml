@@ -80,3 +80,28 @@ function disable_debug()
 	if instance_exists(oPathfinder) {oPathfinder.debug=false;}	
 	if instance_exists(oBattleHandler) {oBattleHandler.debug=false;}
 }
+
+//Settings (also named in oSettingsMenu)
+setting[0,0] = "Music Volume";
+setting[1,0] = "Game Volume";
+setting[2,0] = "2";
+setting[3,0] = "3";
+setting[4,0] = "4";
+
+//This is where the settings are stored primarily
+setting[0,1] = 75; //Music Volume
+setting[1,1] = 100; //Game Volume
+setting[2,1] = 0; //
+setting[3,1] = 0; //
+setting[4,1] = 0; //
+
+music_volume = setting[0][1];
+game_volume = setting[1][1];
+
+function load_settings()
+{
+	if instance_exists(oSettingsMenu)
+	{
+		
+	}
+}

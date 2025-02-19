@@ -1,7 +1,9 @@
 function scr_PlayerInput(){
 	//INPUTS
 	pressed_Enter = keyboard_check_pressed(vk_enter);
+	released_Enter = keyboard_check_released(vk_enter);
 	pressed_BACKSPACE = keyboard_check_pressed(vk_backspace);
+	released_BACKSPACE = keyboard_check_released(vk_backspace);
 	pressed_LMB = mouse_check_button_pressed(mb_left);
 	pressed_RMB = mouse_check_button_pressed(mb_right);
 	pressed_ESC = keyboard_check_pressed(vk_escape);

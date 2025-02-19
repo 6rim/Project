@@ -25,7 +25,7 @@ switch (menuhighlighted) {
 	case 1: instance_destroy(oMenu); break; //destroy main pause menu
 	
 	//Settings
-	case 2: with instance_create_depth(guiX+8,guiY,depth-1,oSettingsMenu)
+	case 2: with instance_create_depth(guiX,guiY,depth-1,oSettingsMenu)
 	{			}
 	break;
 	

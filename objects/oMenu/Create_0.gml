@@ -4,7 +4,7 @@ depth = -500;
 
 guiX = -1; //Position to display GUI
 guiY = -1;
-offsetX = menuwidth*menutile;
+offsetX = (menuwidth*menutile)+32;
 offsetY = 0;
 
 confirm_dialogue = false;
